@@ -1,0 +1,1503 @@
+[16:34:25] | INFO | analist_agent | Uygulama başlıyor…
+[16:40:09] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[16:40:09] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[16:40:11] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[16:40:11] | INFO | qgen | SQL adayı üretildi.
+[16:40:11] | INFO | validator | EXPLAIN OK.
+[16:40:11] | INFO | exec | Sorgu çalıştı: 1 satır (4.0 ms).
+[16:40:11] | INFO | post | Postprocess tamam.
+[16:40:13] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[16:40:13] | INFO | sum | Özet hazır.
+[16:40:13] | INFO | guardian | Guardian check (pasif).
+[16:40:13] | INFO | analist_agent | Süre=3790.5 ms | Tokens in=327 out=140 | Cost=0.1494 USD
+[16:40:13] | ERROR | analist_agent | Çalışma sırasında hata: 'dict' object has no attribute 'answer_text'
+Traceback (most recent call last):
+  File "/home/nagme/analist-agent/main.py", line 115, in main
+    run_once(q, cfg, conn, llm, show_sql_override=show_sql_override, rag_override=rag_override)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nagme/analist-agent/main.py", line 44, in run_once
+    print(final_state.answer_text or "(cevap yok)")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'answer_text'
+[09:06:44] | INFO | analist_agent | Uygulama başlıyor…
+[09:06:58] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[09:06:58] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[09:06:58] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[09:06:59] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:06:59] | INFO | qgen | SQL adayı üretildi.
+[09:06:59] | INFO | validator | EXPLAIN OK.
+[09:06:59] | INFO | exec | Sorgu çalıştı: 1 satır (0.4 ms).
+[09:06:59] | INFO | post | Postprocess tamam.
+[09:07:01] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:01] | INFO | sum | Özet hazır.
+[09:07:01] | INFO | guardian | Guardian check (pasif).
+[09:07:01] | INFO | analist_agent | Süre=3324.9 ms | Tokens in=327 out=120 | Cost=0.1374 USD
+[09:07:44] | INFO | planner | Intent=non_sql — DB erişimi yok.
+[09:07:44] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[09:07:45] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:45] | INFO | qgen | SQL adayı üretildi.
+[09:07:45] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:47] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:47] | INFO | qgen | SQL adayı üretildi.
+[09:07:47] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:48] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:48] | INFO | qgen | SQL adayı üretildi.
+[09:07:48] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:49] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:49] | INFO | qgen | SQL adayı üretildi.
+[09:07:49] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:51] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:51] | INFO | qgen | SQL adayı üretildi.
+[09:07:51] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:52] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:52] | INFO | qgen | SQL adayı üretildi.
+[09:07:52] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:53] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:53] | INFO | qgen | SQL adayı üretildi.
+[09:07:53] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:55] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:55] | INFO | qgen | SQL adayı üretildi.
+[09:07:55] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:56] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:56] | INFO | qgen | SQL adayı üretildi.
+[09:07:56] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali.
+[09:07:57] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:07:57] | INFO | qgen | SQL adayı üretildi.
+[09:07:57] | INFO | validator | EXPLAIN OK.
+[09:07:57] | INFO | exec | Sorgu çalıştı: 20 satır (3.3 ms).
+[09:07:57] | INFO | post | Postprocess tamam.
+[09:07:57] | ERROR | analist_agent | Çalışma sırasında hata: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+Traceback (most recent call last):
+  File "/home/nagme/Desktop/analist-agent/main.py", line 117, in main
+    run_once(q, cfg, conn, llm, show_sql_override=show_sql_override, rag_override=rag_override)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/nagme/Desktop/analist-agent/main.py", line 33, in run_once
+    out = graph.invoke(state)
+  File "/home/nagme/miniconda3/lib/python3.13/site-packages/langgraph/pregel/main.py", line 3026, in invoke
+    for chunk in self.stream(
+                 ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<10 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    ):
+    ^
+  File "/home/nagme/miniconda3/lib/python3.13/site-packages/langgraph/pregel/main.py", line 2675, in stream
+    raise GraphRecursionError(msg)
+langgraph.errors.GraphRecursionError: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+[10:17:54] | INFO | analist_agent | Uygulama başlıyor…
+[10:18:02] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[10:18:02] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[10:18:02] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:18:04] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:18:04] | INFO | qgen | SQL adayı üretildi.
+[10:18:04] | INFO | validator | EXPLAIN OK.
+[10:18:04] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[10:18:04] | INFO | post | Postprocess tamam.
+[10:18:07] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:18:07] | INFO | sum | Özet hazır.
+[10:18:07] | INFO | guardian | Guardian check (pasif).
+[10:18:07] | INFO | analist_agent | Süre=4857.7 ms | Tokens in=634 out=157 | Cost=0.221 USD
+[10:19:12] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[10:19:12] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:19:12] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:19:12] | INFO | qgen | SQL adayı üretildi.
+[10:19:12] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[10:19:12] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[10:19:12] | INFO | post | Postprocess tamam.
+[10:19:14] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:19:14] | INFO | sum | Özet hazır.
+[10:19:14] | INFO | guardian | Guardian check (pasif).
+[10:19:14] | INFO | analist_agent | Süre=2277.3 ms | Tokens in=310 out=88 | Cost=0.1148 USD
+[10:19:21] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[10:19:21] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:19:21] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:19:21] | INFO | qgen | SQL adayı üretildi.
+[10:19:21] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[10:19:21] | INFO | exec | Sorgu çalıştı: 1 satır (4.2 ms).
+[10:19:21] | INFO | post | Postprocess tamam.
+[10:19:22] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:19:22] | INFO | sum | Özet hazır.
+[10:19:22] | INFO | guardian | Guardian check (pasif).
+[10:19:22] | INFO | analist_agent | Süre=1444.6 ms | Tokens in=333 out=42 | Cost=0.0918 USD
+[10:26:17] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[10:26:17] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:26:18] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:26:18] | INFO | qgen | SQL adayı üretildi.
+[10:26:18] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[10:26:18] | INFO | exec | Sorgu çalıştı: 50 satır (0.2 ms).
+[10:26:18] | INFO | post | Postprocess tamam.
+[10:26:20] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:26:20] | INFO | sum | Özet hazır.
+[10:26:20] | INFO | guardian | Guardian check (pasif).
+[10:26:20] | INFO | analist_agent | Süre=2314.6 ms | Tokens in=2227 out=61 | Cost=0.482 USD
+[10:26:42] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[10:26:42] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:26:42] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:26:42] | INFO | qgen | SQL adayı üretildi.
+[10:26:42] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[10:26:42] | INFO | exec | Sorgu çalıştı: 50 satır (0.7 ms).
+[10:26:42] | INFO | post | Postprocess tamam.
+[10:26:44] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:26:44] | INFO | sum | Özet hazır.
+[10:26:44] | INFO | guardian | Guardian check (pasif).
+[10:26:44] | INFO | analist_agent | Süre=2400.8 ms | Tokens in=2227 out=84 | Cost=0.4958 USD
+[10:36:13] | INFO | analist_agent | Uygulama başlıyor…
+[10:37:24] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[10:37:24] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:37:24] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:37:24] | INFO | qgen | SQL adayı üretildi.
+[10:37:24] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[10:37:24] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[10:37:24] | INFO | post | Postprocess tamam.
+[10:37:26] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:37:26] | INFO | sum | Özet hazır.
+[10:37:26] | INFO | guardian | Guardian check (pasif).
+[10:37:26] | INFO | analist_agent | Süre=1822.7 ms | Tokens in=310 out=59 | Cost=0.0974 USD
+[10:38:27] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:38:27] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:38:27] | INFO | qgen | SQL adayı üretildi.
+[10:38:27] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[10:38:27] | INFO | exec | Sorgu çalıştı: 50 satır (0.6 ms).
+[10:38:27] | INFO | post | Postprocess tamam.
+[10:38:30] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:38:30] | INFO | sum | Özet hazır.
+[10:38:30] | INFO | guardian | Guardian check (pasif).
+[10:38:30] | INFO | analist_agent | Süre=3331.7 ms | Tokens in=2227 out=109 | Cost=0.5108 USD
+[10:41:23] | INFO | analist_agent | Uygulama başlıyor…
+[10:41:40] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[10:41:40] | INFO | planner | Intent=non_sql (noise/exit).
+[10:41:40] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[10:42:02] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[10:42:02] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:42:03] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:42:03] | INFO | qgen | SQL adayı üretildi.
+[10:42:03] | INFO | validator | EXPLAIN OK.
+[10:42:03] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[10:42:03] | INFO | post | Postprocess tamam.
+[10:42:08] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:42:08] | INFO | sum | Özet hazır.
+[10:42:08] | INFO | guardian | Guardian check (pasif).
+[10:42:08] | INFO | analist_agent | Süre=6263.9 ms | Tokens in=629 out=233 | Cost=0.2656 USD
+[10:46:53] | INFO | analist_agent | Uygulama başlıyor…
+[10:47:22] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[10:47:22] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[10:47:22] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[10:47:23] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:47:23] | INFO | qgen | SQL adayı üretildi.
+[10:47:23] | INFO | validator | EXPLAIN OK.
+[10:47:23] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[10:47:23] | INFO | post | Postprocess tamam.
+[10:47:29] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[10:47:29] | INFO | sum | Özet hazır (tr).
+[10:47:29] | INFO | guardian | Guardian check (pasif).
+[10:47:29] | INFO | analist_agent | Süre=6797.2 ms | Tokens in=707 out=185 | Cost=0.2524 USD
+[10:59:45] | INFO | analist_agent | Uygulama başlıyor…
+[10:59:52] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[10:59:52] | INFO | planner | Intent=non_sql (noise/exit).
+[10:59:52] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:00:33] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:00:33] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:00:34] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:00:34] | INFO | qgen | SQL adayı üretildi.
+[11:00:34] | INFO | validator | EXPLAIN OK.
+[11:00:34] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:00:34] | INFO | post | Postprocess tamam.
+[11:00:38] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:00:38] | INFO | sum | Özet hazır (auto).
+[11:00:38] | INFO | guardian | Guardian check (pasif).
+[11:00:38] | INFO | analist_agent | Süre=5258.4 ms | Tokens in=588 out=179 | Cost=0.225 USD
+[11:00:53] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:00:53] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:00:53] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:00:53] | INFO | qgen | SQL adayı üretildi.
+[11:00:53] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:00:53] | INFO | exec | Sorgu çalıştı: 1 satır (0.2 ms).
+[11:00:53] | INFO | post | Postprocess tamam.
+[11:00:55] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:00:55] | INFO | sum | Özet hazır (auto).
+[11:00:55] | INFO | guardian | Guardian check (pasif).
+[11:00:55] | INFO | analist_agent | Süre=2755.0 ms | Tokens in=289 out=109 | Cost=0.1232 USD
+[11:03:29] | INFO | analist_agent | Uygulama başlıyor…
+[11:03:39] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:03:39] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:03:39] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:03:39] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:03:39] | INFO | qgen | SQL adayı üretildi.
+[11:03:39] | INFO | validator | EXPLAIN OK.
+[11:03:39] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:03:39] | INFO | post | Postprocess tamam.
+[11:03:43] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:03:43] | INFO | sum | Özet hazır (auto).
+[11:03:43] | INFO | guardian | Guardian check (pasif).
+[11:03:43] | INFO | analist_agent | Süre=4054.2 ms | Tokens in=707 out=107 | Cost=0.2056 USD
+[11:11:27] | INFO | analist_agent | Uygulama başlıyor…
+[11:11:28] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:11:28] | INFO | planner | Intent=non_sql (noise/exit).
+[11:11:28] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:11:29] | INFO | analist_agent | Uygulama başlıyor…
+[11:11:29] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:11:29] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:11:29] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:11:30] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:11:30] | INFO | qgen | SQL adayı üretildi.
+[11:11:30] | INFO | validator | EXPLAIN OK.
+[11:11:30] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:11:30] | INFO | post | Postprocess tamam.
+[11:11:35] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:11:35] | INFO | sum | Özet hazır (auto).
+[11:11:35] | INFO | guardian | Guardian check (pasif).
+[11:11:35] | INFO | analist_agent | Süre=5513.0 ms | Tokens in=721 out=156 | Cost=0.2378 USD
+[11:11:36] | INFO | analist_agent | Uygulama başlıyor…
+[11:11:36] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:11:36] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:11:36] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:11:37] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:11:37] | INFO | qgen | SQL adayı üretildi.
+[11:11:37] | INFO | validator | EXPLAIN OK.
+[11:11:37] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:11:37] | INFO | post | Postprocess tamam.
+[11:11:39] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:11:39] | INFO | sum | Özet hazır (auto).
+[11:11:39] | INFO | guardian | Guardian check (pasif).
+[11:11:39] | INFO | analist_agent | Süre=2451.9 ms | Tokens in=283 out=89 | Cost=0.11 USD
+[11:11:40] | INFO | analist_agent | Uygulama başlıyor…
+[11:11:40] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:11:40] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:11:40] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:11:42] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:11:42] | INFO | qgen | SQL adayı üretildi.
+[11:11:42] | INFO | validator | EXPLAIN OK.
+[11:11:42] | INFO | exec | Sorgu çalıştı: 3 satır (0.1 ms).
+[11:11:42] | INFO | post | Postprocess tamam.
+[11:11:45] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:11:45] | INFO | sum | Özet hazır (auto).
+[11:11:45] | INFO | guardian | Guardian check (pasif).
+[11:11:45] | INFO | analist_agent | Süre=4555.7 ms | Tokens in=306 out=129 | Cost=0.1386 USD
+[11:11:45] | INFO | analist_agent | Uygulama başlıyor…
+[11:11:46] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:11:46] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:11:46] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:11:48] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:11:48] | INFO | qgen | SQL adayı üretildi.
+[11:11:48] | INFO | validator | EXPLAIN OK.
+[11:11:48] | INFO | exec | Sorgu çalıştı: 20 satır (0.3 ms).
+[11:11:48] | INFO | post | Postprocess tamam.
+[11:11:53] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:11:53] | INFO | sum | Özet hazır (auto).
+[11:11:53] | INFO | guardian | Guardian check (pasif).
+[11:11:53] | INFO | analist_agent | Süre=6935.8 ms | Tokens in=566 out=223 | Cost=0.247 USD
+[11:12:35] | INFO | analist_agent | Uygulama başlıyor…
+[11:12:36] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:12:36] | INFO | planner | Intent=non_sql (noise/exit).
+[11:12:36] | INFO | analist_agent | Süre=2.3 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:12:36] | INFO | analist_agent | Uygulama başlıyor…
+[11:12:37] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:12:37] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:12:37] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:12:37] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:37] | INFO | qgen | SQL adayı üretildi.
+[11:12:37] | INFO | validator | EXPLAIN OK.
+[11:12:37] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:12:37] | INFO | post | Postprocess tamam.
+[11:12:40] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:40] | INFO | sum | Özet hazır (auto).
+[11:12:40] | INFO | guardian | Guardian check (pasif).
+[11:12:40] | INFO | analist_agent | Süre=3034.8 ms | Tokens in=706 out=107 | Cost=0.2054 USD
+[11:12:41] | INFO | analist_agent | Uygulama başlıyor…
+[11:12:41] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:12:41] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:12:41] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:12:42] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:42] | INFO | qgen | SQL adayı üretildi.
+[11:12:42] | INFO | validator | EXPLAIN OK.
+[11:12:42] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:12:42] | INFO | post | Postprocess tamam.
+[11:12:43] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:43] | INFO | sum | Özet hazır (auto).
+[11:12:43] | INFO | guardian | Guardian check (pasif).
+[11:12:43] | INFO | analist_agent | Süre=1809.8 ms | Tokens in=283 out=70 | Cost=0.0986 USD
+[11:12:44] | INFO | analist_agent | Uygulama başlıyor…
+[11:12:44] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:12:45] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:12:45] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:12:46] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:46] | INFO | qgen | SQL adayı üretildi.
+[11:12:46] | INFO | validator | EXPLAIN OK.
+[11:12:46] | INFO | exec | Sorgu çalıştı: 3 satır (0.1 ms).
+[11:12:46] | INFO | post | Postprocess tamam.
+[11:12:49] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:49] | INFO | sum | Özet hazır (auto).
+[11:12:49] | INFO | guardian | Guardian check (pasif).
+[11:12:49] | INFO | analist_agent | Süre=4723.3 ms | Tokens in=306 out=135 | Cost=0.1422 USD
+[11:12:50] | INFO | analist_agent | Uygulama başlıyor…
+[11:12:51] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:12:51] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:12:51] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:12:52] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:52] | INFO | qgen | SQL adayı üretildi.
+[11:12:52] | INFO | validator | EXPLAIN OK.
+[11:12:52] | INFO | exec | Sorgu çalıştı: 20 satır (0.3 ms).
+[11:12:52] | INFO | post | Postprocess tamam.
+[11:12:56] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:56] | INFO | sum | Özet hazır (auto).
+[11:12:56] | INFO | guardian | Guardian check (pasif).
+[11:12:56] | INFO | analist_agent | Süre=5164.9 ms | Tokens in=571 out=176 | Cost=0.2198 USD
+[11:12:57] | INFO | analist_agent | Uygulama başlıyor…
+[11:12:57] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:12:57] | INFO | planner | Intent=non_sql (noise/exit).
+[11:12:57] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:12:58] | INFO | analist_agent | Uygulama başlıyor…
+[11:12:58] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:12:59] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:12:59] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:12:59] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:12:59] | INFO | qgen | SQL adayı üretildi.
+[11:12:59] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:12:59] | INFO | exec | Sorgu çalıştı: 1 satır (0.0 ms).
+[11:12:59] | INFO | post | Postprocess tamam.
+[11:13:00] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:00] | INFO | sum | Özet hazır (auto).
+[11:13:00] | INFO | guardian | Guardian check (pasif).
+[11:13:00] | INFO | analist_agent | Süre=1364.5 ms | Tokens in=280 out=45 | Cost=0.083 USD
+[11:13:01] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:01] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:01] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:01] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:02] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:02] | INFO | qgen | SQL adayı üretildi.
+[11:13:02] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:13:02] | INFO | exec | Sorgu çalıştı: 12 satır (0.1 ms).
+[11:13:02] | INFO | post | Postprocess tamam.
+[11:13:06] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:06] | INFO | sum | Özet hazır (auto).
+[11:13:06] | INFO | guardian | Guardian check (pasif).
+[11:13:06] | INFO | analist_agent | Süre=5004.1 ms | Tokens in=412 out=162 | Cost=0.1796 USD
+[11:13:07] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:08] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:08] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:08] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:08] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:08] | INFO | qgen | SQL adayı üretildi.
+[11:13:08] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:13:08] | INFO | exec | Sorgu çalıştı: 1 satır (0.2 ms).
+[11:13:08] | INFO | post | Postprocess tamam.
+[11:13:10] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:10] | INFO | sum | Özet hazır (auto).
+[11:13:10] | INFO | guardian | Guardian check (pasif).
+[11:13:10] | INFO | analist_agent | Süre=1939.8 ms | Tokens in=286 out=69 | Cost=0.0986 USD
+[11:13:10] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:11] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:11] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:11] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:12] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:12] | INFO | qgen | SQL adayı üretildi.
+[11:13:12] | INFO | validator | EXPLAIN OK.
+[11:13:12] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:13:12] | INFO | post | Postprocess tamam.
+[11:13:18] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:18] | INFO | sum | Özet hazır (auto).
+[11:13:18] | INFO | guardian | Guardian check (pasif).
+[11:13:18] | INFO | analist_agent | Süre=6918.5 ms | Tokens in=540 out=225 | Cost=0.243 USD
+[11:13:19] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:19] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:19] | INFO | planner | Intent=non_sql (noise/exit).
+[11:13:19] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:13:20] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:21] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:21] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:21] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:21] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:21] | INFO | qgen | SQL adayı üretildi.
+[11:13:21] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:13:21] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:13:21] | INFO | post | Postprocess tamam.
+[11:13:22] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:22] | INFO | sum | Özet hazır (auto).
+[11:13:22] | INFO | guardian | Guardian check (pasif).
+[11:13:22] | INFO | analist_agent | Süre=1435.6 ms | Tokens in=295 out=48 | Cost=0.0878 USD
+[11:13:23] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:23] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:24] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:24] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:25] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:25] | INFO | qgen | SQL adayı üretildi.
+[11:13:25] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nSELECT T2.llm_name \nFROM use_llm_service AS T1 \nJOIN llm_providers AS T2 \nON T1.llm_id = T2.llm_id \nWHERE T1.created_at >= datetime('now', '-90 days');\n```"
+[11:13:27] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:27] | INFO | qgen | SQL adayı üretildi.
+[11:13:27] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nSELECT T2.llm_name \nFROM use_llm_service AS T1 \nINNER JOIN llm_providers AS T2 \nON T1.llm_id = T2.llm_id \nWHERE T1.created_at >= datetime('now', '-90 days');\n```"
+[11:13:28] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:28] | INFO | qgen | SQL adayı üretildi.
+[11:13:28] | INFO | validator | EXPLAIN OK.
+[11:13:28] | INFO | exec | Sorgu çalıştı: 50 satır (0.6 ms).
+[11:13:28] | INFO | post | Postprocess tamam.
+[11:13:32] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:32] | INFO | sum | Özet hazır (auto).
+[11:13:32] | INFO | guardian | Guardian check (pasif).
+[11:13:32] | INFO | analist_agent | Süre=8189.3 ms | Tokens in=1085 out=228 | Cost=0.3538 USD
+[11:13:33] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:33] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:33] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:33] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:35] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:35] | INFO | qgen | SQL adayı üretildi.
+[11:13:35] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:13:35] | INFO | exec | Sorgu çalıştı: 5 satır (0.2 ms).
+[11:13:35] | INFO | post | Postprocess tamam.
+[11:13:37] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:37] | INFO | sum | Özet hazır (auto).
+[11:13:37] | INFO | guardian | Guardian check (pasif).
+[11:13:37] | INFO | analist_agent | Süre=3640.1 ms | Tokens in=366 out=131 | Cost=0.1518 USD
+[11:13:38] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:38] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:38] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:38] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:39] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:39] | INFO | qgen | SQL adayı üretildi.
+[11:13:39] | INFO | validator | EXPLAIN OK.
+[11:13:39] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:13:39] | INFO | post | Postprocess tamam.
+[11:13:42] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:42] | INFO | sum | Özet hazır (auto).
+[11:13:42] | INFO | guardian | Guardian check (pasif).
+[11:13:42] | INFO | analist_agent | Süre=3584.1 ms | Tokens in=601 out=117 | Cost=0.1904 USD
+[11:13:43] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:43] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:43] | INFO | planner | Intent=non_sql (noise/exit).
+[11:13:43] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:13:44] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:45] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:45] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:45] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:45] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:45] | INFO | qgen | SQL adayı üretildi.
+[11:13:45] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:13:45] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:13:45] | INFO | post | Postprocess tamam.
+[11:13:46] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:46] | INFO | sum | Özet hazır (auto).
+[11:13:46] | INFO | guardian | Guardian check (pasif).
+[11:13:46] | INFO | analist_agent | Süre=1888.7 ms | Tokens in=284 out=76 | Cost=0.1024 USD
+[11:13:47] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:48] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:48] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:48] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:48] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:48] | INFO | qgen | SQL adayı üretildi.
+[11:13:48] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:13:48] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:13:48] | INFO | post | Postprocess tamam.
+[11:13:49] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:49] | INFO | sum | Özet hazır (auto).
+[11:13:49] | INFO | guardian | Guardian check (pasif).
+[11:13:49] | INFO | analist_agent | Süre=977.5 ms | Tokens in=283 out=28 | Cost=0.0734 USD
+[11:13:50] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:50] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:50] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:50] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:52] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:52] | INFO | qgen | SQL adayı üretildi.
+[11:13:52] | INFO | validator | EXPLAIN OK.
+[11:13:52] | INFO | exec | Sorgu çalıştı: 10 satır (0.1 ms).
+[11:13:52] | INFO | post | Postprocess tamam.
+[11:13:54] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:54] | INFO | sum | Özet hazır (auto).
+[11:13:54] | INFO | guardian | Guardian check (pasif).
+[11:13:54] | INFO | analist_agent | Süre=3952.6 ms | Tokens in=443 out=128 | Cost=0.1654 USD
+[11:13:55] | INFO | analist_agent | Uygulama başlıyor…
+[11:13:55] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:13:55] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:13:55] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:13:56] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:56] | INFO | qgen | SQL adayı üretildi.
+[11:13:56] | INFO | validator | EXPLAIN OK.
+[11:13:56] | INFO | exec | Sorgu çalıştı: 8 satır (0.1 ms).
+[11:13:56] | INFO | post | Postprocess tamam.
+[11:13:58] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:13:58] | INFO | sum | Özet hazır (auto).
+[11:13:58] | INFO | guardian | Guardian check (pasif).
+[11:13:58] | INFO | analist_agent | Süre=2885.8 ms | Tokens in=384 out=102 | Cost=0.138 USD
+[11:17:20] | INFO | analist_agent | Uygulama başlıyor…
+[11:17:20] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:17:20] | INFO | planner | Intent=non_sql (noise/exit).
+[11:17:20] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:17:21] | INFO | analist_agent | Uygulama başlıyor…
+[11:17:22] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:17:22] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:17:22] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:17:22] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:17:22] | INFO | qgen | SQL adayı üretildi.
+[11:17:22] | INFO | validator | EXPLAIN OK.
+[11:17:22] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:17:22] | INFO | post | Postprocess tamam.
+[11:17:25] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:17:25] | INFO | sum | Özet hazır (auto).
+[11:17:25] | INFO | guardian | Guardian check (pasif).
+[11:17:25] | INFO | analist_agent | Süre=2973.1 ms | Tokens in=706 out=90 | Cost=0.1952 USD
+[11:17:26] | INFO | analist_agent | Uygulama başlıyor…
+[11:17:26] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:17:26] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:17:26] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:17:27] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:17:27] | INFO | qgen | SQL adayı üretildi.
+[11:17:27] | INFO | validator | EXPLAIN OK.
+[11:17:27] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:17:27] | INFO | post | Postprocess tamam.
+[11:17:29] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:17:29] | INFO | sum | Özet hazır (auto).
+[11:17:29] | INFO | guardian | Guardian check (pasif).
+[11:17:29] | INFO | analist_agent | Süre=2431.8 ms | Tokens in=283 out=83 | Cost=0.1064 USD
+[11:17:29] | INFO | analist_agent | Uygulama başlıyor…
+[11:17:30] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:17:30] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:17:30] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:17:32] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:17:32] | INFO | qgen | SQL adayı üretildi.
+[11:17:32] | INFO | validator | EXPLAIN OK.
+[11:17:32] | INFO | exec | Sorgu çalıştı: 3 satır (0.1 ms).
+[11:17:32] | INFO | post | Postprocess tamam.
+[11:17:34] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:17:34] | INFO | sum | Özet hazır (auto).
+[11:17:34] | INFO | guardian | Guardian check (pasif).
+[11:17:34] | INFO | analist_agent | Süre=4056.2 ms | Tokens in=306 out=123 | Cost=0.135 USD
+[11:17:35] | INFO | analist_agent | Uygulama başlıyor…
+[11:17:35] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:17:35] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:17:35] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:17:37] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:17:37] | INFO | qgen | SQL adayı üretildi.
+[11:17:37] | INFO | validator | EXPLAIN OK.
+[11:17:37] | INFO | exec | Sorgu çalıştı: 20 satır (0.3 ms).
+[11:17:37] | INFO | post | Postprocess tamam.
+[11:18:06] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:07] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:07] | INFO | planner | Intent=non_sql (noise/exit).
+[11:18:07] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:18:08] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:08] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:08] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:08] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:09] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:09] | INFO | qgen | SQL adayı üretildi.
+[11:18:09] | INFO | validator | EXPLAIN OK.
+[11:18:09] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:18:09] | INFO | post | Postprocess tamam.
+[11:18:12] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:12] | INFO | sum | Özet hazır (auto).
+[11:18:12] | INFO | guardian | Guardian check (pasif).
+[11:18:12] | INFO | analist_agent | Süre=4169.8 ms | Tokens in=721 out=133 | Cost=0.224 USD
+[11:18:13] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:14] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:14] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:14] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:14] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:14] | INFO | qgen | SQL adayı üretildi.
+[11:18:14] | INFO | validator | EXPLAIN OK.
+[11:18:14] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:18:14] | INFO | post | Postprocess tamam.
+[11:18:16] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:16] | INFO | sum | Özet hazır (auto).
+[11:18:16] | INFO | guardian | Guardian check (pasif).
+[11:18:16] | INFO | analist_agent | Süre=2258.8 ms | Tokens in=283 out=84 | Cost=0.107 USD
+[11:18:17] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:17] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:17] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:17] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:19] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:19] | INFO | qgen | SQL adayı üretildi.
+[11:18:19] | INFO | validator | EXPLAIN OK.
+[11:18:19] | INFO | exec | Sorgu çalıştı: 3 satır (0.1 ms).
+[11:18:19] | INFO | post | Postprocess tamam.
+[11:18:22] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:22] | INFO | sum | Özet hazır (auto).
+[11:18:22] | INFO | guardian | Guardian check (pasif).
+[11:18:22] | INFO | analist_agent | Süre=4529.0 ms | Tokens in=306 out=132 | Cost=0.1404 USD
+[11:18:23] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:23] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:23] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:23] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:25] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:25] | INFO | qgen | SQL adayı üretildi.
+[11:18:25] | INFO | validator | EXPLAIN OK.
+[11:18:25] | INFO | exec | Sorgu çalıştı: 20 satır (0.3 ms).
+[11:18:25] | INFO | post | Postprocess tamam.
+[11:18:32] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:32] | INFO | sum | Özet hazır (auto).
+[11:18:32] | INFO | guardian | Guardian check (pasif).
+[11:18:32] | INFO | analist_agent | Süre=8665.9 ms | Tokens in=571 out=289 | Cost=0.2876 USD
+[11:18:33] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:33] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:33] | INFO | planner | Intent=non_sql (noise/exit).
+[11:18:33] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:18:34] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:34] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:34] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:34] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:35] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:35] | INFO | qgen | SQL adayı üretildi.
+[11:18:35] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:18:35] | INFO | exec | Sorgu çalıştı: 1 satır (0.0 ms).
+[11:18:35] | INFO | post | Postprocess tamam.
+[11:18:36] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:36] | INFO | sum | Özet hazır (auto).
+[11:18:36] | INFO | guardian | Guardian check (pasif).
+[11:18:36] | INFO | analist_agent | Süre=1389.2 ms | Tokens in=280 out=50 | Cost=0.086 USD
+[11:18:37] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:37] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:37] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:37] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:38] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:38] | INFO | qgen | SQL adayı üretildi.
+[11:18:38] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:18:38] | INFO | exec | Sorgu çalıştı: 12 satır (0.1 ms).
+[11:18:38] | INFO | post | Postprocess tamam.
+[11:18:41] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:41] | INFO | sum | Özet hazır (auto).
+[11:18:41] | INFO | guardian | Guardian check (pasif).
+[11:18:41] | INFO | analist_agent | Süre=3812.9 ms | Tokens in=403 out=124 | Cost=0.155 USD
+[11:18:42] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:42] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:42] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:42] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:43] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:43] | INFO | qgen | SQL adayı üretildi.
+[11:18:43] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nSELECT COUNT(DISTINCT user_id) \nFROM message_into \nWHERE created_at >= DATETIME('now', '-7 day');\n```"
+[11:18:44] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:44] | INFO | qgen | SQL adayı üretildi.
+[11:18:44] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:18:44] | INFO | exec | Sorgu çalıştı: 1 satır (0.2 ms).
+[11:18:44] | INFO | post | Postprocess tamam.
+[11:18:44] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:44] | INFO | sum | Özet hazır (auto).
+[11:18:44] | INFO | guardian | Guardian check (pasif).
+[11:18:44] | INFO | analist_agent | Süre=1907.9 ms | Tokens in=505 out=62 | Cost=0.1382 USD
+[11:18:45] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:46] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:46] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:46] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:46] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:46] | INFO | qgen | SQL adayı üretildi.
+[11:18:46] | INFO | validator | EXPLAIN OK.
+[11:18:46] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:18:46] | INFO | post | Postprocess tamam.
+[11:18:50] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:50] | INFO | sum | Özet hazır (auto).
+[11:18:50] | INFO | guardian | Guardian check (pasif).
+[11:18:50] | INFO | analist_agent | Süre=4112.1 ms | Tokens in=555 out=152 | Cost=0.2022 USD
+[11:18:51] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:51] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:51] | INFO | planner | Intent=non_sql (noise/exit).
+[11:18:51] | INFO | analist_agent | Süre=2.0 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:18:52] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:52] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:52] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:52] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:53] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:53] | INFO | qgen | SQL adayı üretildi.
+[11:18:53] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:18:53] | INFO | exec | Sorgu çalıştı: 1 satır (0.0 ms).
+[11:18:53] | INFO | post | Postprocess tamam.
+[11:18:54] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:54] | INFO | sum | Özet hazır (auto).
+[11:18:54] | INFO | guardian | Guardian check (pasif).
+[11:18:54] | INFO | analist_agent | Süre=1510.0 ms | Tokens in=295 out=51 | Cost=0.0896 USD
+[11:18:55] | INFO | analist_agent | Uygulama başlıyor…
+[11:18:55] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:18:55] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:18:55] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:18:57] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:57] | INFO | qgen | SQL adayı üretildi.
+[11:18:57] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nSELECT T2.llm_name \nFROM use_llm_service AS T1 \nINNER JOIN llm_providers AS T2 \nON T1.llm_id = T2.llm_id \nWHERE T1.created_at >= datetime('now', '-90 days');\n```"
+[11:18:58] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:18:58] | INFO | qgen | SQL adayı üretildi.
+[11:18:58] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nSELECT DISTINCT T2.llm_name \nFROM use_llm_service AS T1 \nINNER JOIN llm_providers AS T2 \nON T1.llm_id = T2.llm_id \nWHERE T1.created_at >= DATE('now', '-90 day');\n```"
+[11:19:00] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:00] | INFO | qgen | SQL adayı üretildi.
+[11:19:00] | INFO | validator | EXPLAIN OK.
+[11:19:00] | INFO | exec | Sorgu çalıştı: 50 satır (0.2 ms).
+[11:19:00] | INFO | post | Postprocess tamam.
+[11:19:03] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:03] | INFO | sum | Özet hazır (auto).
+[11:19:03] | INFO | guardian | Guardian check (pasif).
+[11:19:03] | INFO | analist_agent | Süre=7479.8 ms | Tokens in=1085 out=208 | Cost=0.3418 USD
+[11:19:04] | INFO | analist_agent | Uygulama başlıyor…
+[11:19:04] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:19:04] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:19:04] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:19:06] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:06] | INFO | qgen | SQL adayı üretildi.
+[11:19:06] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:19:06] | INFO | exec | Sorgu çalıştı: 5 satır (0.1 ms).
+[11:19:06] | INFO | post | Postprocess tamam.
+[11:19:08] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:08] | INFO | sum | Özet hazır (auto).
+[11:19:08] | INFO | guardian | Guardian check (pasif).
+[11:19:08] | INFO | analist_agent | Süre=3665.3 ms | Tokens in=366 out=121 | Cost=0.1458 USD
+[11:19:09] | INFO | analist_agent | Uygulama başlıyor…
+[11:19:09] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:19:09] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:19:09] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:19:10] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:10] | INFO | qgen | SQL adayı üretildi.
+[11:19:10] | INFO | validator | EXPLAIN OK.
+[11:19:10] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:19:10] | INFO | post | Postprocess tamam.
+[11:19:15] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:15] | INFO | sum | Özet hazır (auto).
+[11:19:15] | INFO | guardian | Guardian check (pasif).
+[11:19:15] | INFO | analist_agent | Süre=5784.0 ms | Tokens in=601 out=197 | Cost=0.2384 USD
+[11:19:16] | INFO | analist_agent | Uygulama başlıyor…
+[11:19:16] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:19:16] | INFO | planner | Intent=non_sql (noise/exit).
+[11:19:16] | INFO | analist_agent | Süre=2.0 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:19:17] | INFO | analist_agent | Uygulama başlıyor…
+[11:19:17] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:19:18] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:19:18] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:19:18] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:18] | INFO | qgen | SQL adayı üretildi.
+[11:19:18] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:19:18] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:19:18] | INFO | post | Postprocess tamam.
+[11:19:19] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:19] | INFO | sum | Özet hazır (auto).
+[11:19:19] | INFO | guardian | Guardian check (pasif).
+[11:19:19] | INFO | analist_agent | Süre=982.4 ms | Tokens in=284 out=30 | Cost=0.0748 USD
+[11:19:19] | INFO | analist_agent | Uygulama başlıyor…
+[11:19:20] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:19:20] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:19:20] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:19:20] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:20] | INFO | qgen | SQL adayı üretildi.
+[11:19:20] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:19:20] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:19:20] | INFO | post | Postprocess tamam.
+[11:19:22] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:22] | INFO | sum | Özet hazır (auto).
+[11:19:22] | INFO | guardian | Guardian check (pasif).
+[11:19:22] | INFO | analist_agent | Süre=1628.5 ms | Tokens in=283 out=57 | Cost=0.0908 USD
+[11:19:22] | INFO | analist_agent | Uygulama başlıyor…
+[11:19:23] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:19:23] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:19:23] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:19:23] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:24] | INFO | qgen | SQL adayı üretildi.
+[11:19:24] | INFO | validator | EXPLAIN OK.
+[11:19:24] | INFO | exec | Sorgu çalıştı: 10 satır (0.1 ms).
+[11:19:24] | INFO | post | Postprocess tamam.
+[11:19:27] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:27] | INFO | sum | Özet hazır (auto).
+[11:19:27] | INFO | guardian | Guardian check (pasif).
+[11:19:27] | INFO | analist_agent | Süre=4094.5 ms | Tokens in=489 out=101 | Cost=0.1584 USD
+[11:19:28] | INFO | analist_agent | Uygulama başlıyor…
+[11:19:28] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:19:28] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:19:28] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:19:29] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:29] | INFO | qgen | SQL adayı üretildi.
+[11:19:29] | INFO | validator | EXPLAIN OK.
+[11:19:29] | INFO | exec | Sorgu çalıştı: 8 satır (0.1 ms).
+[11:19:29] | INFO | post | Postprocess tamam.
+[11:19:34] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:19:34] | INFO | sum | Özet hazır (auto).
+[11:19:34] | INFO | guardian | Guardian check (pasif).
+[11:19:34] | INFO | analist_agent | Süre=5625.4 ms | Tokens in=344 out=214 | Cost=0.1972 USD
+[11:21:44] | INFO | analist_agent | Uygulama başlıyor…
+[11:21:44] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:21:44] | INFO | planner | Intent=non_sql (noise/exit).
+[11:21:44] | INFO | analist_agent | Süre=2.7 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:21:45] | INFO | analist_agent | Uygulama başlıyor…
+[11:21:45] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:21:45] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:21:45] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:21:46] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:21:46] | INFO | qgen | SQL adayı üretildi.
+[11:21:46] | INFO | validator | EXPLAIN OK.
+[11:21:46] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:21:46] | INFO | post | Postprocess tamam.
+[11:21:49] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:21:49] | INFO | sum | Özet hazır (auto).
+[11:21:49] | INFO | guardian | Guardian check (pasif).
+[11:21:49] | INFO | analist_agent | Süre=3497.2 ms | Tokens in=706 out=110 | Cost=0.2072 USD
+[11:21:50] | INFO | analist_agent | Uygulama başlıyor…
+[11:21:50] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:21:50] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:21:50] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:21:51] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:21:51] | INFO | qgen | SQL adayı üretildi.
+[11:21:51] | INFO | validator | EXPLAIN OK.
+[11:21:51] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:21:51] | INFO | post | Postprocess tamam.
+[11:21:52] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:21:52] | INFO | sum | Özet hazır (auto).
+[11:21:52] | INFO | guardian | Guardian check (pasif).
+[11:21:52] | INFO | analist_agent | Süre=1842.8 ms | Tokens in=283 out=70 | Cost=0.0986 USD
+[11:21:53] | INFO | analist_agent | Uygulama başlıyor…
+[11:21:53] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:21:54] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:21:54] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:21:55] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:21:55] | INFO | qgen | SQL adayı üretildi.
+[11:21:55] | INFO | validator | EXPLAIN OK.
+[11:21:55] | INFO | exec | Sorgu çalıştı: 3 satır (0.1 ms).
+[11:21:55] | INFO | post | Postprocess tamam.
+[11:21:58] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:21:58] | INFO | sum | Özet hazır (auto).
+[11:21:58] | INFO | guardian | Guardian check (pasif).
+[11:21:58] | INFO | analist_agent | Süre=4830.3 ms | Tokens in=311 out=138 | Cost=0.145 USD
+[11:21:59] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:00] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:00] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:00] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:02] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:02] | INFO | qgen | SQL adayı üretildi.
+[11:22:02] | INFO | validator | EXPLAIN OK.
+[11:22:02] | INFO | exec | Sorgu çalıştı: 20 satır (0.3 ms).
+[11:22:02] | INFO | post | Postprocess tamam.
+[11:22:07] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:07] | INFO | sum | Özet hazır (auto).
+[11:22:07] | INFO | guardian | Guardian check (pasif).
+[11:22:07] | INFO | analist_agent | Süre=7340.7 ms | Tokens in=571 out=249 | Cost=0.2636 USD
+[11:22:08] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:08] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:09] | INFO | planner | Intent=non_sql (noise/exit).
+[11:22:09] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:22:10] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:10] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:10] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:10] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:10] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:10] | INFO | qgen | SQL adayı üretildi.
+[11:22:10] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:22:10] | INFO | exec | Sorgu çalıştı: 1 satır (0.0 ms).
+[11:22:10] | INFO | post | Postprocess tamam.
+[11:22:11] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:12] | INFO | sum | Özet hazır (auto).
+[11:22:12] | INFO | guardian | Guardian check (pasif).
+[11:22:12] | INFO | analist_agent | Süre=1394.4 ms | Tokens in=280 out=46 | Cost=0.0836 USD
+[11:22:12] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:13] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:13] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:13] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:14] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:14] | INFO | qgen | SQL adayı üretildi.
+[11:22:14] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:22:14] | INFO | exec | Sorgu çalıştı: 12 satır (0.1 ms).
+[11:22:14] | INFO | post | Postprocess tamam.
+[11:22:18] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:18] | INFO | sum | Özet hazır (auto).
+[11:22:18] | INFO | guardian | Guardian check (pasif).
+[11:22:18] | INFO | analist_agent | Süre=4865.0 ms | Tokens in=412 out=162 | Cost=0.1796 USD
+[11:22:19] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:19] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:19] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:19] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:20] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:20] | INFO | qgen | SQL adayı üretildi.
+[11:22:20] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:22:20] | INFO | exec | Sorgu çalıştı: 1 satır (0.2 ms).
+[11:22:20] | INFO | post | Postprocess tamam.
+[11:22:21] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:21] | INFO | sum | Özet hazır (auto).
+[11:22:21] | INFO | guardian | Guardian check (pasif).
+[11:22:21] | INFO | analist_agent | Süre=2042.3 ms | Tokens in=286 out=68 | Cost=0.098 USD
+[11:22:22] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:23] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:23] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:23] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:24] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:24] | INFO | qgen | SQL adayı üretildi.
+[11:22:24] | INFO | validator | EXPLAIN OK.
+[11:22:24] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:22:24] | INFO | post | Postprocess tamam.
+[11:22:26] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:26] | INFO | sum | Özet hazır (auto).
+[11:22:26] | INFO | guardian | Guardian check (pasif).
+[11:22:26] | INFO | analist_agent | Süre=3399.6 ms | Tokens in=555 out=133 | Cost=0.1908 USD
+[11:22:27] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:28] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:28] | INFO | planner | Intent=non_sql (noise/exit).
+[11:22:28] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:22:29] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:29] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:29] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:29] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:30] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:30] | INFO | qgen | SQL adayı üretildi.
+[11:22:30] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:22:30] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:22:30] | INFO | post | Postprocess tamam.
+[11:22:31] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:31] | INFO | sum | Özet hazır (auto).
+[11:22:31] | INFO | guardian | Guardian check (pasif).
+[11:22:31] | INFO | analist_agent | Süre=1626.0 ms | Tokens in=295 out=52 | Cost=0.0902 USD
+[11:22:32] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:32] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:32] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:32] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:34] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:34] | INFO | qgen | SQL adayı üretildi.
+[11:22:34] | INFO | validator | EXPLAIN OK.
+[11:22:34] | INFO | exec | Sorgu çalıştı: 50 satır (0.2 ms).
+[11:22:34] | INFO | post | Postprocess tamam.
+[11:22:38] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:38] | INFO | sum | Özet hazır (auto).
+[11:22:38] | INFO | guardian | Guardian check (pasif).
+[11:22:38] | INFO | analist_agent | Süre=5404.9 ms | Tokens in=649 out=143 | Cost=0.2156 USD
+[11:22:39] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:39] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:39] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:39] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:41] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:41] | INFO | qgen | SQL adayı üretildi.
+[11:22:41] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:22:41] | INFO | exec | Sorgu çalıştı: 5 satır (0.1 ms).
+[11:22:41] | INFO | post | Postprocess tamam.
+[11:22:45] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:45] | INFO | sum | Özet hazır (auto).
+[11:22:45] | INFO | guardian | Guardian check (pasif).
+[11:22:45] | INFO | analist_agent | Süre=5509.7 ms | Tokens in=366 out=138 | Cost=0.156 USD
+[11:22:46] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:46] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:46] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:46] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:47] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:47] | INFO | qgen | SQL adayı üretildi.
+[11:22:47] | INFO | validator | EXPLAIN OK.
+[11:22:47] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:22:47] | INFO | post | Postprocess tamam.
+[11:22:51] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:51] | INFO | sum | Özet hazır (auto).
+[11:22:51] | INFO | guardian | Guardian check (pasif).
+[11:22:51] | INFO | analist_agent | Süre=5005.4 ms | Tokens in=601 out=174 | Cost=0.2246 USD
+[11:22:52] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:52] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:52] | INFO | planner | Intent=non_sql (noise/exit).
+[11:22:52] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:22:53] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:54] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:54] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:54] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:55] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:55] | INFO | qgen | SQL adayı üretildi.
+[11:22:55] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:22:55] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:22:55] | INFO | post | Postprocess tamam.
+[11:22:56] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:56] | INFO | sum | Özet hazır (auto).
+[11:22:56] | INFO | guardian | Guardian check (pasif).
+[11:22:56] | INFO | analist_agent | Süre=2290.2 ms | Tokens in=284 out=68 | Cost=0.0976 USD
+[11:22:57] | INFO | analist_agent | Uygulama başlıyor…
+[11:22:57] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:22:57] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:22:57] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:22:58] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:58] | INFO | qgen | SQL adayı üretildi.
+[11:22:58] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:22:58] | INFO | exec | Sorgu çalıştı: 1 satır (0.0 ms).
+[11:22:58] | INFO | post | Postprocess tamam.
+[11:22:59] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:22:59] | INFO | sum | Özet hazır (auto).
+[11:22:59] | INFO | guardian | Guardian check (pasif).
+[11:22:59] | INFO | analist_agent | Süre=1199.6 ms | Tokens in=283 out=27 | Cost=0.0728 USD
+[11:22:59] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:00] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:00] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:00] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:01] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:01] | INFO | qgen | SQL adayı üretildi.
+[11:23:01] | INFO | validator | EXPLAIN OK.
+[11:23:01] | INFO | exec | Sorgu çalıştı: 10 satır (0.1 ms).
+[11:23:01] | INFO | post | Postprocess tamam.
+[11:23:04] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:04] | INFO | sum | Özet hazır (auto).
+[11:23:04] | INFO | guardian | Guardian check (pasif).
+[11:23:04] | INFO | analist_agent | Süre=4350.6 ms | Tokens in=489 out=131 | Cost=0.1764 USD
+[11:23:05] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:06] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:06] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:06] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:06] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:06] | INFO | qgen | SQL adayı üretildi.
+[11:23:06] | INFO | validator | EXPLAIN OK.
+[11:23:06] | INFO | exec | Sorgu çalıştı: 8 satır (0.1 ms).
+[11:23:06] | INFO | post | Postprocess tamam.
+[11:23:10] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:10] | INFO | sum | Özet hazır (auto).
+[11:23:10] | INFO | guardian | Guardian check (pasif).
+[11:23:10] | INFO | analist_agent | Süre=4461.3 ms | Tokens in=384 out=142 | Cost=0.162 USD
+[11:23:22] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:23] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:23] | INFO | planner | Intent=non_sql (noise/exit).
+[11:23:23] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:23:24] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:24] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:24] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:24] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:25] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:25] | INFO | qgen | SQL adayı üretildi.
+[11:23:25] | INFO | validator | EXPLAIN OK.
+[11:23:25] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:23:25] | INFO | post | Postprocess tamam.
+[11:23:28] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:28] | INFO | sum | Özet hazır (auto).
+[11:23:28] | INFO | guardian | Guardian check (pasif).
+[11:23:28] | INFO | analist_agent | Süre=4218.5 ms | Tokens in=721 out=133 | Cost=0.224 USD
+[11:23:29] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:30] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:30] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:30] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:30] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:30] | INFO | qgen | SQL adayı üretildi.
+[11:23:30] | INFO | validator | EXPLAIN OK.
+[11:23:30] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:23:30] | INFO | post | Postprocess tamam.
+[11:23:31] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:31] | INFO | sum | Özet hazır (auto).
+[11:23:31] | INFO | guardian | Guardian check (pasif).
+[11:23:31] | INFO | analist_agent | Süre=1693.0 ms | Tokens in=283 out=66 | Cost=0.0962 USD
+[11:23:32] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:33] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:33] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:33] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:34] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:34] | INFO | qgen | SQL adayı üretildi.
+[11:23:34] | INFO | validator | EXPLAIN OK.
+[11:23:34] | INFO | exec | Sorgu çalıştı: 3 satır (0.1 ms).
+[11:23:34] | INFO | post | Postprocess tamam.
+[11:23:37] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:37] | INFO | sum | Özet hazır (auto).
+[11:23:37] | INFO | guardian | Guardian check (pasif).
+[11:23:37] | INFO | analist_agent | Süre=4372.1 ms | Tokens in=311 out=128 | Cost=0.139 USD
+[11:23:38] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:38] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:38] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:38] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:40] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:40] | INFO | qgen | SQL adayı üretildi.
+[11:23:40] | INFO | validator | EXPLAIN OK.
+[11:23:40] | INFO | exec | Sorgu çalıştı: 20 satır (0.3 ms).
+[11:23:40] | INFO | post | Postprocess tamam.
+[11:23:47] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:47] | INFO | sum | Özet hazır (auto).
+[11:23:47] | INFO | guardian | Guardian check (pasif).
+[11:23:47] | INFO | analist_agent | Süre=8519.7 ms | Tokens in=601 out=278 | Cost=0.287 USD
+[11:23:48] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:48] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:48] | INFO | planner | Intent=non_sql (noise/exit).
+[11:23:48] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:23:49] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:50] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:50] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:50] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:50] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:50] | INFO | qgen | SQL adayı üretildi.
+[11:23:50] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:23:50] | INFO | exec | Sorgu çalıştı: 1 satır (0.0 ms).
+[11:23:50] | INFO | post | Postprocess tamam.
+[11:23:51] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:51] | INFO | sum | Özet hazır (auto).
+[11:23:51] | INFO | guardian | Guardian check (pasif).
+[11:23:51] | INFO | analist_agent | Süre=1549.5 ms | Tokens in=280 out=54 | Cost=0.0884 USD
+[11:23:52] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:52] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:53] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:53] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:54] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:54] | INFO | qgen | SQL adayı üretildi.
+[11:23:54] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:23:54] | INFO | exec | Sorgu çalıştı: 12 satır (0.1 ms).
+[11:23:54] | INFO | post | Postprocess tamam.
+[11:23:57] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:57] | INFO | sum | Özet hazır (auto).
+[11:23:57] | INFO | guardian | Guardian check (pasif).
+[11:23:57] | INFO | analist_agent | Süre=4511.6 ms | Tokens in=412 out=134 | Cost=0.1628 USD
+[11:23:58] | INFO | analist_agent | Uygulama başlıyor…
+[11:23:58] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:23:58] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:23:58] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:23:59] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:23:59] | INFO | qgen | SQL adayı üretildi.
+[11:23:59] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:23:59] | INFO | exec | Sorgu çalıştı: 1 satır (0.2 ms).
+[11:23:59] | INFO | post | Postprocess tamam.
+[11:24:00] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:00] | INFO | sum | Özet hazır (auto).
+[11:24:00] | INFO | guardian | Guardian check (pasif).
+[11:24:00] | INFO | analist_agent | Süre=1677.6 ms | Tokens in=286 out=55 | Cost=0.0902 USD
+[11:24:01] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:01] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:01] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:01] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:02] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:02] | INFO | qgen | SQL adayı üretildi.
+[11:24:02] | INFO | validator | EXPLAIN OK.
+[11:24:02] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:24:02] | INFO | post | Postprocess tamam.
+[11:24:05] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:05] | INFO | sum | Özet hazır (auto).
+[11:24:05] | INFO | guardian | Guardian check (pasif).
+[11:24:05] | INFO | analist_agent | Süre=3467.4 ms | Tokens in=555 out=134 | Cost=0.1914 USD
+[11:24:06] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:06] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:06] | INFO | planner | Intent=non_sql (noise/exit).
+[11:24:06] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:24:07] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:08] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:08] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:08] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:08] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:08] | INFO | qgen | SQL adayı üretildi.
+[11:24:08] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:24:08] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:24:08] | INFO | post | Postprocess tamam.
+[11:24:09] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:09] | INFO | sum | Özet hazır (auto).
+[11:24:09] | INFO | guardian | Guardian check (pasif).
+[11:24:09] | INFO | analist_agent | Süre=1574.7 ms | Tokens in=295 out=53 | Cost=0.0908 USD
+[11:24:10] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:11] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:11] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:11] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:12] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:12] | INFO | qgen | SQL adayı üretildi.
+[11:24:12] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nSELECT DISTINCT T2.llm_name \nFROM use_llm_service AS T1 \nINNER JOIN llm_providers AS T2 \nON T1.llm_id = T2.llm_id \nWHERE T1.created_at >= DATE('now', '-90 day');\n```"
+[11:24:14] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:14] | INFO | qgen | SQL adayı üretildi.
+[11:24:14] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nSELECT T2.llm_name \nFROM use_llm_service AS T1 \nINNER JOIN llm_providers AS T2 \nON T1.llm_id = T2.llm_id \nWHERE T1.created_at >= datetime('now', '-90 day');\n```"
+[11:24:15] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:15] | INFO | qgen | SQL adayı üretildi.
+[11:24:15] | INFO | validator | EXPLAIN OK.
+[11:24:15] | INFO | exec | Sorgu çalıştı: 50 satır (0.4 ms).
+[11:24:15] | INFO | post | Postprocess tamam.
+[11:24:20] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:20] | INFO | sum | Özet hazır (auto).
+[11:24:20] | INFO | guardian | Guardian check (pasif).
+[11:24:20] | INFO | analist_agent | Süre=9019.0 ms | Tokens in=1085 out=264 | Cost=0.3754 USD
+[11:24:21] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:21] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:21] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:21] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:23] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:23] | INFO | qgen | SQL adayı üretildi.
+[11:24:23] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:24:23] | INFO | exec | Sorgu çalıştı: 5 satır (0.1 ms).
+[11:24:23] | INFO | post | Postprocess tamam.
+[11:24:25] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:25] | INFO | sum | Özet hazır (auto).
+[11:24:25] | INFO | guardian | Guardian check (pasif).
+[11:24:25] | INFO | analist_agent | Süre=4357.8 ms | Tokens in=370 out=152 | Cost=0.1652 USD
+[11:24:26] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:27] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:27] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:27] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:28] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:28] | INFO | qgen | SQL adayı üretildi.
+[11:24:28] | INFO | validator | EXPLAIN OK.
+[11:24:28] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[11:24:28] | INFO | post | Postprocess tamam.
+[11:24:37] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:37] | INFO | sum | Özet hazır (auto).
+[11:24:37] | INFO | guardian | Guardian check (pasif).
+[11:24:37] | INFO | analist_agent | Süre=10477.0 ms | Tokens in=601 out=274 | Cost=0.2846 USD
+[11:24:38] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:39] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:39] | INFO | planner | Intent=non_sql (noise/exit).
+[11:24:39] | INFO | analist_agent | Süre=2.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[11:24:39] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:40] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:40] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:40] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:41] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:41] | INFO | qgen | SQL adayı üretildi.
+[11:24:41] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:24:41] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[11:24:41] | INFO | post | Postprocess tamam.
+[11:24:41] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:41] | INFO | sum | Özet hazır (auto).
+[11:24:41] | INFO | guardian | Guardian check (pasif).
+[11:24:41] | INFO | analist_agent | Süre=996.6 ms | Tokens in=284 out=30 | Cost=0.0748 USD
+[11:24:42] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:42] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:42] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:42] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:43] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:43] | INFO | qgen | SQL adayı üretildi.
+[11:24:43] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[11:24:43] | INFO | exec | Sorgu çalıştı: 1 satır (0.0 ms).
+[11:24:43] | INFO | post | Postprocess tamam.
+[11:24:43] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:43] | INFO | sum | Özet hazır (auto).
+[11:24:43] | INFO | guardian | Guardian check (pasif).
+[11:24:43] | INFO | analist_agent | Süre=984.0 ms | Tokens in=283 out=25 | Cost=0.0716 USD
+[11:24:44] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:45] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:45] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:45] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:46] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:46] | INFO | qgen | SQL adayı üretildi.
+[11:24:46] | INFO | validator | EXPLAIN OK.
+[11:24:46] | INFO | exec | Sorgu çalıştı: 10 satır (0.1 ms).
+[11:24:46] | INFO | post | Postprocess tamam.
+[11:24:50] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:50] | INFO | sum | Özet hazır (auto).
+[11:24:50] | INFO | guardian | Guardian check (pasif).
+[11:24:50] | INFO | analist_agent | Süre=5280.7 ms | Tokens in=489 out=140 | Cost=0.1818 USD
+[11:24:51] | INFO | analist_agent | Uygulama başlıyor…
+[11:24:51] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[11:24:52] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[11:24:52] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[11:24:53] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:53] | INFO | qgen | SQL adayı üretildi.
+[11:24:53] | INFO | validator | EXPLAIN OK.
+[11:24:53] | INFO | exec | Sorgu çalıştı: 8 satır (0.1 ms).
+[11:24:53] | INFO | post | Postprocess tamam.
+[11:24:56] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[11:24:56] | INFO | sum | Özet hazır (auto).
+[11:24:56] | INFO | guardian | Guardian check (pasif).
+[11:24:56] | INFO | analist_agent | Süre=4160.5 ms | Tokens in=344 out=166 | Cost=0.1684 USD
+[13:38:06] | INFO | analist_agent | Uygulama başlıyor…
+[13:39:49] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[13:39:49] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[13:39:49] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[13:39:51] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[13:39:51] | INFO | qgen | SQL adayı üretildi.
+[13:39:51] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT T1.llm_name, COUNT(T2.chat_session_id) as count \nFROM llm_providers T1 \nJOIN use_llm_service T2 ON T1.llm_id = T2.llm_id \nGROUP BY T1.llm_name \nORDER BY count DESC \nLIMIT 3;\n```'
+[13:39:53] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[13:39:53] | INFO | qgen | SQL adayı üretildi.
+[13:39:53] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT T.llm_name, COUNT(T.llm_id) as count \nFROM (\n  SELECT uls.llm_id, lp.llm_name \n  FROM use_llm_service uls \n  JOIN llm_providers lp ON uls.llm_id = lp.llm_id\n) T \nGROUP BY T.llm_name \nORD'
+[13:39:55] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[13:39:55] | INFO | qgen | SQL adayı üretildi.
+[13:39:55] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT T2.llm_name, COUNT(T1.llm_id) as count \nFROM use_llm_service T1 \nJOIN llm_providers T2 ON T1.llm_id = T2.llm_id \nGROUP BY T1.llm_id \nORDER BY count DESC \nLIMIT 3;\n```'
+[13:39:56] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[13:39:56] | INFO | qgen | SQL adayı üretildi.
+[13:39:56] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT T1.llm_name, COUNT(T2.llm_id) as count \nFROM llm_providers T1 \nJOIN use_llm_service T2 ON T1.llm_id = T2.llm_id \nGROUP BY T1.llm_name \nORDER BY count DESC \nLIMIT 3;\n```'
+[13:39:58] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[13:39:58] | INFO | qgen | SQL adayı üretildi.
+[13:39:58] | INFO | validator | EXPLAIN OK.
+[13:39:58] | INFO | exec | Sorgu çalıştı: 3 satır (0.4 ms).
+[13:39:58] | INFO | post | Postprocess tamam.
+[13:40:00] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[13:40:00] | INFO | sum | Özet hazır (auto).
+[13:40:00] | INFO | guardian | Guardian check (pasif).
+[13:40:00] | INFO | analist_agent | Süre=11428.7 ms | Tokens in=1203 out=305 | Cost=0.4236 USD
+[13:41:46] | INFO | planner | Intent=non_sql (noise/exit).
+[13:41:46] | INFO | analist_agent | Süre=1.6 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[13:45:33] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[13:45:33] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[13:45:35] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[13:45:35] | INFO | qgen | SQL adayı üretildi.
+[13:45:36] | INFO | validator | EXPLAIN OK.
+[13:45:36] | INFO | exec | Sorgu çalıştı: 20 satır (1.1 ms).
+[13:45:36] | INFO | post | Postprocess tamam.
+[13:45:43] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[13:45:43] | INFO | sum | Özet hazır (auto).
+[13:45:43] | INFO | guardian | Guardian check (pasif).
+[13:45:43] | INFO | analist_agent | Süre=9805.0 ms | Tokens in=665 out=285 | Cost=0.304 USD
+[08:47:00] | INFO | analist_agent | Uygulama başlıyor…
+[08:47:55] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[08:47:55] | INFO | langid.langid | initializing identifier
+[08:47:56] | INFO | planner | Detected language=tr
+[08:47:56] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'cache_store', 'telemetry']
+[08:47:56] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[08:47:57] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:47:57] | INFO | qgen | SQL adayı üretildi.
+[08:47:57] | INFO | validator | EXPLAIN OK.
+[08:47:57] | INFO | exec | Sorgu çalıştı: 50 satır (1.7 ms).
+[08:47:57] | INFO | post | Postprocess tamam.
+[08:48:03] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:03] | INFO | sum | Özet hazır (tr).
+[08:48:03] | INFO | guardian | Guardian check (pasif).
+[08:48:03] | INFO | analist_agent | Süre=7694.9 ms | Tokens in=683 out=243 | Cost=0.2824 USD
+[08:48:18] | INFO | planner | Detected language=tr
+[08:48:18] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'cache_store', 'telemetry']
+[08:48:18] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[08:48:22] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:22] | INFO | qgen | SQL adayı üretildi.
+[08:48:22] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nWITH units AS (\n  SELECT DISTINCT unit_id \n  FROM user \n  WHERE created_at >= datetime('now', '-90 days')\n),\nused_llms AS (\n  SELECT u.unit_id, uls.llm_id \n  FROM units u \n  JOIN user us ON u.u"
+[08:48:26] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:26] | INFO | qgen | SQL adayı üretildi.
+[08:48:26] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nWITH units AS (\n  SELECT DISTINCT unit_id\n  FROM user\n),\nused_llms AS (\n  SELECT u.unit_id, llm.llm_id, uks.created_at\n  FROM user u\n  JOIN message_into mi ON u.user_id = mi.user_id\n  JOIN use_'
+[08:48:31] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:31] | INFO | qgen | SQL adayı üretildi.
+[08:48:31] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nWITH last_90_days AS (\n  SELECT *\n  FROM use_llm_service\n  WHERE created_at >= DATETIME('now', '-90 days')\n)\nSELECT \n  u.unit_name, \n  llm.llm_name\nFROM \n  last_90_days lls\n  JOIN chat_session "
+[08:48:36] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:36] | INFO | qgen | SQL adayı üretildi.
+[08:48:36] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nWITH units AS (\n  SELECT DISTINCT u.unit_id, u.unit_name \n  FROM unit u\n),\nllm_usage AS (\n  SELECT u.unit_id, l.llm_name, COUNT(DISTINCT uls.chat_session_id) as num_of_sessions\n  FROM use_llm_s'
+[08:48:39] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:39] | INFO | qgen | SQL adayı üretildi.
+[08:48:39] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT DISTINCT T1.unit_name, T4.llm_name \nFROM unit AS T1 \nJOIN user AS T2 ON T1.unit_id = T2.unit_id \nJOIN message_into AS T3 ON T2.user_id = T3.user_id \nJOIN use_llm_service AS T5 ON T3.chat'
+[08:48:43] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:43] | INFO | qgen | SQL adayı üretildi.
+[08:48:43] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nWITH RECENT_USE AS (\n  SELECT DISTINCT u.unit_id, u.unit_name, llm.llm_id, llm.llm_name\n  FROM unit u\n  JOIN user ON u.unit_id = user.unit_id\n  JOIN message_into mi ON user.user_id = mi.user_id'
+[08:48:47] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:47] | INFO | qgen | SQL adayı üretildi.
+[08:48:47] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT \n    u.unit_name, \n    lp.llm_name, \n    COUNT(uls.chat_session_id) AS count\nFROM \n    unit u\nJOIN \n    user us ON u.unit_id = us.unit_id\nJOIN \n    message_into mi ON us.user_id = mi.use'
+[08:48:51] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:51] | INFO | qgen | SQL adayı üretildi.
+[08:48:51] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT DISTINCT T1.unit_name, T4.llm_name \nFROM unit AS T1 \nJOIN user AS T2 ON T1.unit_id = T2.unit_id \nJOIN message_into AS T3 ON T2.user_id = T3.user_id \nJOIN use_llm_service AS T5 ON T3.chat'
+[08:48:53] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:53] | INFO | qgen | SQL adayı üretildi.
+[08:48:53] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT u.unit_name, l.llm_name \nFROM unit u \nJOIN user us ON u.unit_id = us.unit_id \nJOIN message_into mi ON us.user_id = mi.user_id \nJOIN use_llm_service ulls ON mi.chat_session_id = ulls.chat'
+[08:48:57] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:48:57] | INFO | qgen | SQL adayı üretildi.
+[08:48:57] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nWITH RECENT_SESSIONS AS (\n  SELECT chat_session_id \n  FROM chat_session \n  WHERE message_date > (SELECT DATETIME('now', '-90 days'))\n)\nSELECT u.unit_name, l.llm_name \nFROM unit u \nJOIN user ON "
+[08:49:02] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:02] | INFO | qgen | SQL adayı üretildi.
+[08:49:02] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nWITH last_90_days AS (\n  SELECT chat_session_id, llm_id, created_at\n  FROM use_llm_service\n  WHERE created_at > (SELECT DATETIME('now', '-90 day') FROM unit)\n)\nSELECT u.unit_name, lllm.llm_name"
+[08:49:05] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:05] | INFO | qgen | SQL adayı üretildi.
+[08:49:05] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT DISTINCT T1.unit_name, T4.llm_name \nFROM unit AS T1 \nJOIN user AS T2 ON T1.unit_id = T2.unit_id \nJOIN message_into AS T3 ON T2.user_id = T3.user_id \nJOIN use_llm_service AS T5 ON T3.chat'
+[08:49:10] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:10] | INFO | qgen | SQL adayı üretildi.
+[08:49:10] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nWITH RECENT_USE AS (\n  SELECT \n    u.unit_name, \n    llm.llm_name, \n    COUNT(DISTINCT us.chat_session_id) AS num_used\n  FROM \n    use_llm_service us\n  JOIN \n    chat_session cs ON us.chat_sess'
+[08:49:14] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:14] | INFO | qgen | SQL adayı üretildi.
+[08:49:14] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nWITH last_90_days AS (\n  SELECT DISTINCT chat_session_id\n  FROM use_llm_service\n  WHERE created_at > (CURRENT_TIMESTAMP - 90 * 86400)\n)\nSELECT u.unit_name, l.llm_name\nFROM last_90_days l90\nJOIN'
+[08:49:19] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:19] | INFO | qgen | SQL adayı üretildi.
+[08:49:19] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nWITH units AS (\n  SELECT DISTINCT unit_id \n  FROM user\n),\nllm_usage AS (\n  SELECT u.unit_id, lllm.llm_name, COUNT(DISTINCT uls.chat_session_id) as num_used\n  FROM units u\n  JOIN user us ON u.un'
+[08:49:23] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:23] | INFO | qgen | SQL adayı üretildi.
+[08:49:23] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nWITH unit_llm_usage AS (\n  SELECT u.unit_id, u.unit_name, uls.llm_id, COUNT(DISTINCT uls.chat_session_id) as num_sessions\n  FROM unit u\n  JOIN user us ON u.unit_id = us.unit_id\n  JOIN message_i'
+[08:49:27] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:27] | INFO | qgen | SQL adayı üretildi.
+[08:49:27] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql="```sql\nWITH RECENT_SESSIONS AS (\n  SELECT chat_session_id \n  FROM chat_session \n  WHERE message_date > (SELECT DATETIME('now', '-90 days'))\n)\nSELECT u.unit_name, lllm.llm_name \nFROM unit u \nJOIN user "
+[08:49:31] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:31] | INFO | qgen | SQL adayı üretildi.
+[08:49:31] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nWITH unit_llm_usage AS (\n  SELECT u.unit_name, lllm.llm_name, COUNT(ulls.chat_session_id) as usage_count\n  FROM unit u\n  JOIN user us ON u.unit_id = us.unit_id\n  JOIN message_into mi ON us.user'
+[08:49:35] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:49:35] | INFO | qgen | SQL adayı üretildi.
+[08:49:35] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT DISTINCT T1.unit_name, T4.llm_name \nFROM unit AS T1 \nJOIN user AS T2 ON T1.unit_id = T2.unit_id \nJOIN message_into AS T3 ON T2.user_id = T3.user_id \nJOIN use_llm_service AS T5 ON T3.chat'
+[08:50:17] | INFO | analist_agent | Uygulama başlıyor…
+[08:51:07] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[08:51:07] | INFO | langid.langid | initializing identifier
+[08:51:08] | INFO | planner | Detected language=tr
+[08:51:08] | INFO | planner | Intent=non_sql (noise/greeting/edu). plan=['chitchat', 'telemetry']
+[08:51:08] | INFO | analist_agent | Süre=815.8 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[08:54:42] | INFO | analist_agent | Uygulama başlıyor…
+[08:54:50] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[08:54:50] | INFO | langid.langid | initializing identifier
+[08:54:51] | INFO | planner | Detected language=tr
+[08:54:51] | INFO | planner | Intent=non_sql (noise/greeting/edu). plan=['chitchat', 'telemetry']
+[08:54:51] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:54:51] | INFO | chitchat | ChitChat yanıtı hazır.
+[08:54:51] | INFO | analist_agent | Süre=1307.9 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[08:55:04] | INFO | planner | Detected language=tr
+[08:55:04] | INFO | planner | Intent=non_sql (no db semantics). plan=['chitchat', 'telemetry']
+[08:55:04] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:55:04] | INFO | chitchat | ChitChat yanıtı hazır.
+[08:55:04] | INFO | analist_agent | Süre=468.8 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[08:55:12] | INFO | planner | Detected language=tr
+[08:55:12] | INFO | planner | Intent=non_sql (no db semantics). plan=['chitchat', 'telemetry']
+[08:55:13] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:55:13] | INFO | chitchat | ChitChat yanıtı hazır.
+[08:55:13] | INFO | analist_agent | Süre=832.5 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[08:58:48] | INFO | planner | Detected language=en
+[08:58:48] | INFO | planner | Intent=non_sql (no db semantics). plan=['chitchat', 'telemetry']
+[08:58:48] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:58:48] | INFO | chitchat | ChitChat yanıtı hazır.
+[08:58:48] | INFO | analist_agent | Süre=440.4 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[08:59:38] | INFO | analist_agent | Uygulama başlıyor…
+[08:59:41] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[08:59:41] | INFO | langid.langid | initializing identifier
+[08:59:42] | INFO | planner | Detected language=en
+[08:59:42] | INFO | planner | Intent=non_sql (noise/greeting/edu). plan=['chitchat', 'telemetry']
+[08:59:42] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:59:42] | INFO | chitchat | ChitChat yanıtı hazır. language=sw
+[08:59:42] | INFO | analist_agent | Süre=1185.3 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[08:59:49] | INFO | planner | Detected language=en
+[08:59:49] | INFO | planner | Intent=non_sql (noise/greeting/edu). plan=['chitchat', 'telemetry']
+[08:59:49] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:59:49] | INFO | chitchat | ChitChat yanıtı hazır. language=id
+[08:59:49] | INFO | analist_agent | Süre=311.2 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[08:59:55] | INFO | planner | Detected language=tr
+[08:59:55] | INFO | planner | Intent=non_sql (no db semantics). plan=['chitchat', 'telemetry']
+[08:59:55] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[08:59:55] | INFO | chitchat | ChitChat yanıtı hazır. language=tl
+[08:59:55] | INFO | analist_agent | Süre=201.1 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[09:00:01] | INFO | planner | Detected language=en
+[09:00:01] | INFO | planner | Intent=non_sql (no db semantics). plan=['chitchat', 'telemetry']
+[09:00:01] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:00:01] | INFO | chitchat | ChitChat yanıtı hazır. language=it
+[09:00:01] | INFO | analist_agent | Süre=174.6 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[09:01:38] | INFO | analist_agent | Uygulama başlıyor…
+[09:01:44] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[09:01:44] | INFO | langid.langid | initializing identifier
+[09:01:45] | INFO | planner | Detected language=tr
+[09:01:45] | INFO | planner | Intent=non_sql (noise/greeting/edu). plan=['chitchat', 'telemetry']
+[09:01:45] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:01:45] | INFO | chitchat | ChitChat yanıtı hazır (non-sql).
+[09:01:45] | INFO | analist_agent | Süre=1155.6 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[09:02:30] | INFO | planner | Detected language=tr
+[09:02:30] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'cache_store', 'telemetry']
+[09:02:30] | INFO | cache | Cache MISS (best=0.0)
+[09:02:30] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[09:02:32] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:02:32] | INFO | qgen | SQL adayı üretildi.
+[09:02:32] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT T1.llm_name, COUNT(T2.chat_session_id) as usage_count\nFROM llm_providers T1\nJOIN use_llm_service T2 ON T1.llm_id = T2.llm_id\nGROUP BY T1.llm_name\nORDER BY usage_count DESC\nLIMIT 3;\n```'
+[09:02:34] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:02:34] | INFO | qgen | SQL adayı üretildi.
+[09:02:34] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT T2.llm_name, COUNT(T1.llm_id) as count \nFROM use_llm_service T1 \nJOIN llm_providers T2 ON T1.llm_id = T2.llm_id \nGROUP BY T2.llm_name \nORDER BY count DESC \nLIMIT 3;\n```'
+[09:02:36] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:02:36] | INFO | qgen | SQL adayı üretildi.
+[09:02:36] | WARNING | validator | static_check FAIL: SELECT-only kuralı ihlali. | sql='```sql\nSELECT T2.llm_name, COUNT(T1.llm_id) as usage_count\nFROM use_llm_service T1\nJOIN llm_providers T2 ON T1.llm_id = T2.llm_id\nGROUP BY T2.llm_name\nORDER BY usage_count DESC\nLIMIT 3;\n```'
+[09:02:38] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:02:38] | INFO | qgen | SQL adayı üretildi.
+[09:02:38] | INFO | validator | EXPLAIN OK.
+[09:02:38] | INFO | exec | Sorgu çalıştı: 3 satır (3.9 ms).
+[09:02:38] | INFO | post | Postprocess tamam.
+[09:02:40] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:02:40] | INFO | sum | Özet hazır (tr).
+[09:02:40] | INFO | guardian | Guardian check (pasif).
+[09:02:40] | INFO | cache_store | Yanıt cache'e kaydedildi.
+[09:02:40] | INFO | analist_agent | Süre=9639.4 ms | Tokens in=971 out=266 | Cost=0.3538 USD
+[09:03:11] | INFO | planner | Detected language=tr
+[09:03:11] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'cache_store', 'telemetry']
+[09:03:11] | INFO | cache | Cache HIT (100.0) → 'Hangi LLM provider en çok kullanılmış? İlk 3’ü listele'
+[09:03:11] | INFO | analist_agent | Süre=10.0 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[09:03:30] | INFO | planner | Detected language=tr
+[09:03:30] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'cache_store', 'telemetry']
+[09:03:30] | INFO | cache | Cache MISS (best=46.6)
+[09:03:30] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[09:03:31] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:03:31] | INFO | qgen | SQL adayı üretildi.
+[09:03:31] | INFO | validator | EXPLAIN OK.
+[09:03:31] | INFO | exec | Sorgu çalıştı: 1 satır (4.5 ms).
+[09:03:31] | INFO | post | Postprocess tamam.
+[09:03:32] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:03:32] | INFO | sum | Özet hazır (tr).
+[09:03:32] | INFO | guardian | Guardian check (pasif).
+[09:03:32] | INFO | cache_store | Yanıt cache'e kaydedildi.
+[09:03:32] | INFO | analist_agent | Süre=2332.2 ms | Tokens in=292 out=84 | Cost=0.1088 USD
+[09:39:36] | INFO | analist_agent | Uygulama başlıyor…
+[09:39:46] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[09:39:46] | INFO | planner | Intent=non_sql (noise/exit).
+[09:39:46] | INFO | analist_agent | Süre=2.2 ms | Tokens in=0 out=0 | Cost=0.0 USD
+[09:40:05] | INFO | planner | Intent=sql_query, use_rag=True, plan=['fetch_schema', 'use_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[09:40:05] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[09:40:06] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:40:06] | INFO | qgen | SQL adayı üretildi.
+[09:40:06] | INFO | validator | EXPLAIN OK.
+[09:40:06] | INFO | exec | Sorgu çalıştı: 20 satır (0.1 ms).
+[09:40:06] | INFO | post | Postprocess tamam.
+[09:40:09] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:40:09] | INFO | sum | Özet hazır (None).
+[09:40:09] | INFO | guardian | Guardian check (pasif).
+[09:40:09] | INFO | analist_agent | Süre=4380.4 ms | Tokens in=705 out=143 | Cost=0.2268 USD
+[09:41:56] | INFO | analist_agent | Uygulama başlıyor…
+[09:42:07] | INFO | numexpr.utils | NumExpr defaulting to 16 threads.
+[09:42:07] | INFO | planner | Intent=sql_query, use_rag=False, plan=['fetch_schema', 'no_rag', 'generate_sql', 'validate_sql', 'execute_sql', 'postprocess', 'summarize', 'guardian', 'telemetry']
+[09:42:07] | INFO | schema | Şema dökümanı hazır (585 karakter).
+[09:42:08] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:42:08] | INFO | qgen | SQL adayı üretildi.
+[09:42:08] | WARNING | validator | EXPLAIN uyarıları: ['Plan uyarısı: full scan olabilir.']
+[09:42:08] | INFO | exec | Sorgu çalıştı: 1 satır (0.1 ms).
+[09:42:08] | INFO | post | Postprocess tamam.
+[09:42:09] | INFO | httpx | HTTP Request: POST http://10.150.96.44:20004/v1/chat/completions "HTTP/1.1 200 OK"
+[09:42:09] | INFO | sum | Özet hazır (None).
+[09:42:09] | INFO | guardian | Guardian check (pasif).
+[09:42:09] | INFO | analist_agent | Süre=2376.6 ms | Tokens in=304 out=88 | Cost=0.1136 USD

@@ -1,0 +1,40 @@
+#config.yaml
+db:
+  path: "data/app.db"           # SQLite veritabanı dosyası; göreli/ mutlak olabilir
+  timeout_ms: 4000              # Duvar saati zaman aşımı (ms). Progress handler ile sorguyu kesmek için üst sınır
+  max_instructions: 200000      # SQLite progress handler'a göre instr. limiti; çok karmaşık planları erken keser
+  read_only: true               # Bağlantıyı yalnızca okuma modunda aç; yazma/DDL riskini düşürür
+
+security:
+  allowed_tables: []            # Boş ise tüm tablolar erişilebilir (PROD için risk). Whitelist girmen önerilir
+  banned_keywords: ["drop","alter","insert","update","delete","truncate","copy","create","grant","attach","detach","vacuum","pragma","analyze"]
+                                # Tehlikeli komut kara listesi (case-insensitive kontrol şart)
+  enforce_select_only: true     # Yalnızca SELECT kök düğümüne izin ver (AST doğrulaması ile)
+  max_limit: 1000               # LIMIT yoksa otomatik LIMIT 1000 enjekte et (kartesyen patlamayı kısıtla)
+  allow_multiple_statements: false
+                                # Tek seferde bir ifade; ';' ile zincirlemeyi (SQLi) engeller
+
+rag:
+  enabled: true                 # RAG açık; şemadan/indeksten ipucu ile kolon eşleştir
+  top_k: 5                      # En iyi 5 ipucunu kullan
+  min_score: 0.15               # TF-IDF skor eşiği; daha düşük skorlar gürültü sayılır
+  build_from_schema: true       # DB şemasından otomatik belge/sözlük üret (tablo/kolon sinonimleri)
+
+llm:
+  use_mock: false               # Sahte yanıt kapalı → gerçek LLM endpoint'i kullanılacak
+  model_name: "llama3.3-70b-q8" # Sunucuda kayıtlı model kimliği (OpenAI uyumlu arayüz bekleniyor)
+  temperature: 0.7              # Daha yaratıcı ama SQL için hafif oynaklık yaratabilir (prod'da düşürülebilir)
+  max_tokens: 4096              # Yanıt token üst sınırı (uzun açıklamalar/summaries için önemli)
+  base_url: "http://10.150.96.44:20004/v1" # OpenAI-compatible endpoint (ör. vLLM/Ollama/LM Studio)
+  api_key: "dummy"              # Güvenlik: ENV'den okunması tavsiye edilir (ör. ${LLM_API_KEY})
+  price_per_1k_input: 0.2       # CostTracker girdiler için $/1K token tahmini
+  price_per_1k_output: 0.6      # CostTracker çıktılar için $/1K token tahmini
+  currency: "USD"               # Para birimi (raporlama/telemetri)
+
+runtime:
+  show_sql_in_answer: false     # Nihai yanıtta SQL'i gösterme (debug için açılabilir)
+  locale: "tr"                  # Dil/bölgesel biçimlendirme (tarih, sayı, para)
+  debug: true                   # Ayrıntılı log/trace (geliştirmede açık tut; prod'da INFO)
+  log_dir: "logs"               # JSON log'ların yazılacağı klasör
+  max_repairs: 5                # QGen↔Validator onarım denemeleri üst sınırı (sonsuz döngüyü engeller)
+  recursion_limit: 100          # LangGraph/py recursion koruması (aşırı dallanmayı engeller)

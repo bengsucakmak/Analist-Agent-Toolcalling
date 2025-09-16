@@ -1,0 +1,28 @@
+|   ID | Question                                                 | Expected                                         | Predicted                                        | Result   | Error Type   |
+|------|----------------------------------------------------------|--------------------------------------------------|--------------------------------------------------|----------|--------------|
+|    1 | En fazla kullanıcıya sahip unit hangisi?                 | select unit_id, count(*) as user_count from u... | N/A...                                           | -        | Empty SQL    |
+|    2 | What is the average age of users by unit?                | select unit_id, avg(age) as avg_age from user... | select  unit_id, avg(age) as average_age from... | +        | -            |
+|    3 | Son 30 günde kaç chat_session yapıldı?                   | select count(*) from chat_session where messa... | select  count(chat_session_id) from chat_sess... | +        | -            |
+|    4 | List the top 3 LLM providers by usage.                   | select llm_id, count(*) as usage_count from u... | select  t1.llm_name, count(t2.chat_session_id... | +        | -            |
+|    5 | Her unit için toplam mesaj sayısı nedir?                 | select u.unit_id, sum(c.num_of_mess) as total... | select  t1.unit_name, count(t2.chat_session_i... | +        | -            |
+|    6 | Which user has sent the highest number of messages?      | select u.user_id, count(*) as msg_count from ... | N/A...                                           | -        | Empty SQL    |
+|    7 | Kullanıcıların yaş ortalaması nedir?                     | select avg(age) from user;...                    | select  avg(age) from user limit 1000;...        | +        | -            |
+|    8 | How many chat sessions are there per month?              | select strftime('%y-%m', message_date) as mon... | select  strftime('%y-%m', message_date) as mo... | +        | -            |
+|    9 | Son 7 günde kaç farklı kullanıcı aktifti?                | select count(distinct user_id) from message_i... | select  count(distinct user_id) from message_... | +        | -            |
+|   10 | List all units with their total number of users.         | select unit_id, count(*) as user_count from u... | select  unit_name, count(user_id) from unit l... | +        | -            |
+|   11 | Hangi LLM provider en yüksek max_token değerine sahip?   | select llm_name, max_token from llm_providers... | N/A...                                           | -        | Empty SQL    |
+|   12 | What is the average number of messages per chat session? | select avg(num_of_mess) from chat_session;...    | select  avg(num_of_mess) from chat_session li... | +        | -            |
+|   13 | Son 90 günde hangi LLM'ler kullanıldı?                   | select distinct l.llm_name from use_llm_servi... | select -only kuralı ihlali. | sql="```sql\nse... | +        | -            |
+|   14 | Top 5 users by number of chat sessions.                  | select u.user_id, count(distinct mi.chat_sess... | select  t1.user_id, count(t2.chat_session_id)... | +        | -            |
+|   15 | Her unit için kullanıcıların ortalama yaşı nedir?        | select unit_id, avg(age) from user group by u... | select  t1.unit_name, avg(t2.age) as average_... | +        | -            |
+|   16 | Which chat session had the maximum number of messages?   | select chat_session_id, num_of_mess from chat... | N/A...                                           | -        | Empty SQL    |
+|   17 | Son 1 yılda açılan kullanıcı sayısı nedir?               | select count(*) from user where created_at >=... | select  count(user_id) from user where create... | +        | -            |
+|   18 | How many distinct LLMs have been used?                   | select count(distinct llm_id) from use_llm_se... | select  count(distinct llm_id) from use_llm_s... | +        | -            |
+|   19 | Her LLM provider için toplam kaç chat_session yapılmış?  | select l.llm_name, count(*) as total_sessions... | select  llm_id, count(chat_session_id) from u... | +        | -            |
+|   20 | List the units that have more than 5 users.              | select unit_id, count(*) as user_count from u... | select  t1.unit_name from unit as t1 where t1... | +        | -            |
+
+Evaluation Metrics:
+- Accuracy : 0.80
+- Precision: 1.00
+- Recall   : 0.80
+- F1 Score : 0.89
