@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="ChatGPT Image 18 Eyl 2025 11_35_31" src="https://github.com/user-attachments/assets/e9f47c6c-122b-44b8-8b49-32f2687d4755" /># Analist AI Agent
+# Analist AI Agent
 
 Doğal dilde gelen soruları **SQL**’e çeviren, **SQLite** üzerinde güvenli şekilde çalıştıran ve sonucu okunur biçimde özetleyen analist ajan.
 
