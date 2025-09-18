@@ -1,0 +1,21 @@
+# Veritabanı yapılandırması
+db:
+  path: "/home/nagme/Desktop/tool-calling agent/data/app.db"  # Lütfen kullanacağınız veritabanı dosyasının yolunu buraya yazın.
+# LLM yapılandırması
+llm:
+  provider_priority: ["openrouter"]   # OpenRouter'ı birincil yap
+  temperature: 0.1
+
+  # OpenRouter ayarları
+  openrouter:
+    model_name: "openrouter/sonoma-sky-alpha"   # tool calling destekli, ücretsiz
+    base_url: "https://openrouter.ai/api/v1"
+    api_key: "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"
+  hf:
+    model_id: "meta-llama/Meta-Llama-3-8B-Instruct"
+    api_token: "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"
+# Çalışma zamanı yapılandırması
+runtime:
+  log_dir: "logs"
+  recursion_limit: 25
+  mode: guarded 
